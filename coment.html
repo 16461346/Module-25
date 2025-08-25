@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coment -Module-25-4</title>
+    <style>
+        .coment{
+            border: 3px solid rgba(0, 38, 255, 0.425);
+            padding: 20px;
+            border-radius: 10px;
+            background: #d41d1d25;
+        }
+        textarea{
+            margin-left: 20px;
+        }
+        button{
+            margin-left: 25px;
+            margin-top: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Coment Hare...</h1>
+    <div id="comment-container">
+        <p class="coment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint laudantium quibusdam suscipit autem earum nobis, magni, iste aut repellat error dignissimos sed distinctio. Quos illum magni cumque? Sit, ullam quo.</p>
+        <p class="coment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint laudantium quibusdam suscipit autem earum nobis, magni, iste aut repellat error dignissimos sed distinctio. Quos illum magni cumque? Sit, ullam quo.</p>
+        <p class="coment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint laudantium quibusdam suscipit autem earum nobis, magni, iste aut repellat error dignissimos sed distinctio. Quos illum magni cumque? Sit, ullam quo.</p>
+    </div>
+    <textarea name="" id="input-text" cols="60" rows="5"></textarea>
+    <br>
+    <button id="button">Post Coment</button>
+
+  <script>
+    document.getElementById('button').addEventListener('click',
+        function(){
+            //step 1
+            let inputText=document.getElementById('input-text');
+            // console.log(inputText)
+            let convartComment=inputText.value;
+
+            //step 2
+            let comentContainer=document.getElementById('comment-container');
+            // console.log(comentContainer);
+
+            //step 3
+            let newp=document.createElement('p');
+            newp.classList.add('coment')
+            newp.innerText=convartComment;
+
+
+            //step 4
+            comentContainer.appendChild(newp)
+
+            //step 5 clean The textare
+
+            inputText.value=('')
+            
+            
+        }
+    )
+  </script>
+</body>
+</html>
