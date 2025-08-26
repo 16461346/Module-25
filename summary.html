@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM event Summary Practice</title>
+</head>
+<body>
+    <h1>Dom practice summary</h1>
+    <input id="user-name" type="text" placeholder="Your Name">
+    <button onclick="addName()">Update Name</button>
+    <button id="addName2">Add Name-Two</button>
+    <div id="name-container">
+
+    </div>
+
+
+    <script>
+        //step 1
+        function addName(){
+            //step 2
+            let userName=document.getElementById('user-name');
+            let newName=userName.value;
+
+            //parent niya asa
+            let nameContainer=document.getElementById('name-container');
+
+            //create child element
+            let name=document.createElement('p');
+            name.innerText=newName;
+
+            //add or append 
+            nameContainer.appendChild(name);
+            userName.value='';
+
+        }
+
+        document.getElementById('addName2').addEventListener('click',
+            function(){
+                let userName=document.getElementById('user-name');
+                let newName=userName.value;
+
+                  let nameContainer=document.getElementById('name-container');
+
+            //create child element
+            let name=document.createElement('p');
+            name.innerText=newName;
+
+            //add or append 
+            nameContainer.appendChild(name);
+            userName.value='';
+
+            }
+        )
+    </script>
+</body>
+</html>
