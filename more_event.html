@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse and More Event </title>        
+</head>
+<body>
+    <button id="mouse">Click Me</button>
+    <input type="text" placeholder="Your Name" id="user-name">
+    <input type="text" placeholder="Your Email" id="user-email">
+
+
+<script>
+    // // document.getElementById('mouse').addEventListener('mouseenter',
+    // //     function(){
+    // //         console.log('Eikhane mouse diya button e Click kora hoyese')
+    // //     }
+    // // )
+    // document.getElementById('mouse').addEventListener('mouseout',
+    //     function(){
+    //         console.log('Eikhane mouse diya button e Click kora hoyese')
+    //     }
+    // )
+
+    // document.getElementById('focus-email').addEventListener('focus',
+    //     function(){
+    //         console.log('Input Field On focus')
+    //     }
+    // )
+
+    // document.getElementById('focus-name').addEventListener('blur',
+    //     function(){
+    //         console.log('Input Field On focus')
+    //     }
+    // )
+
+    document.getElementById('user-name').addEventListener('keyup',
+        function(Event){
+            console.log('Typing', Event.target.value)
+        }
+    )
+</script>
+</body>
+</html>
